@@ -30,12 +30,6 @@ def generate(max_length):
         joke = joke[0]
         return tokenizer.decode(joke[3:])
 
-
-def fn(n):
-    print(f"i got {n}")
-    return "thanks"
-
-
 iface = gr.Interface(
     fn=generate,
     inputs=gr.Number(value=200, label="Maxlen"),
